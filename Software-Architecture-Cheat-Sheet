@@ -1,0 +1,53 @@
+Having clean software architecture and staying conform to pre-defined design principles from start of the project is one of the best ways to avoid possible technical debt in the future of that software system. Clean Software Design is a key point for an effective software product.
+Let us have a look at some important principles, rules, guidelines that ensure a clean software design:
+
+Principles:
+Loose Coupling — if classes use each other, they are coupled together. The less classes are coupled, the easier is to change them.
+High Cohesion — degree to which elements of a whole belong together. Components of the class should be highly cohesive.
+Only Local Changes — Changes, maintenance, extensions are only local. This leads to no harming whole environment.
+Easy to Remove — Software Components should be easily removeable.
+Small Components — software system should be only of small components ideally each doing only one task.
+
+Class Design:
+Single Responsibility Principle (SRP) — class should do only one task.
+Open Closed Principle (OCP) — class should be extended not modified.
+Liskov Substitution Principle (LSP) — derived classes must be substitutable for their base classes.
+Dependency Inversion Principle (DIP) — depend on abstractions, not on concretions.
+Interface Segregation Principle (ISP) — interfaces should be fine-grained
+Classes Should be Small.
+Do stuff or know others, but not both.
+
+Cohesion Principles:
+Release Reuse Equivalency Principle (RREP) — only together releaseable components should be bundled together.
+Common Closure Principle (CCP) — classes that change together should be bundled together.
+Common Reuse Principle (CRP) — classes that are used together should be bundled together.
+Coupling Principles:
+Acyclic Dependencies Principle (ADP) — no dependency cycles.
+Stable Dependencies Principle (SDP) — depend on direction of stability.
+Stable Abstractions Principle (SAP) — the more abstract, the more stable.
+
+High-Level Design:
+Keep Configurable Data at High Levels — constants or config datas should be kept in high level.
+Don’t Be Arbitrary — have a convention, principle, rule or guidelines and always follow them.
+Prefer Polymorphism To If/Else or Switch/Case.
+Symmetry / Analogy — Favour symmetric designs (e.g. Load — Save) and designs that follow analogies (e.g. same design as found in .NET framework).
+Separate Multi-Threading Code — isolate multi-thread from rest of the code.
+Code at Wrong Level of Abstraction — stay conform to existing abstraction layers.
+Fields Not Defining State — fields holding data that does not belong to the state of the instance but are to hold temporary data. Use local variables or extract to a class abstracting the performed action.
+Micro Layers — avoid unnecessary design layers.
+
+Environment:
+Project Build Requires Only One Step.
+Executing Tests Requires Only One Step.
+Source Control System — Always use a source control system.
+Continuous Integration — Assure integrity with Continuous Integration.
+Overridden Safeties — Do not override warnings, errors, exception handling
+
+Dependencies:
+Make Logical Dependencies Physical — If one module depends upon another, that dependency should be physical not just logical. Don’t make assumptions.
+Singletons / Service Locator — Make use of dependency injection.
+Base Classes Depending On Their Derivatives — Base classes should work with any derived class.
+Feature Envy — The methods of a class should be interested in the variables and functions of the class they belong to, and not the variables and functions of other classes. Using accessors and mutators of some other object to manipulate its data, is envying the scope of the other object (c).
+Artificial Coupling — Things that don’t depend upon each other should not be artificially coupled.
+Hidden Temporal Coupling — If the order of some method calls is important, then make sure that they cannot be called in the wrong order.
+Transitive Navigation — (Law of Demeter), writing shy code. A module should know only its direct dependencies.
